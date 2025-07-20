@@ -2,16 +2,20 @@
 //
 
 #include <iostream>
+void sw(int& a , int & b)
+{
+    int* aA = &a;
+    int* bB = &b;
+   std::swap(*aA, *bB);
 
+}
 int main()
 {
     int a = 10;
 
     int b = 20;
     std::cout << a << " <-> " << b << std::endl;
-    int* aA = &a;
-    int* bB = &b;
-   std::swap(*aA, *bB);
+    sw(a,b);
 
     std::cout << a << " <-> " << b;
 
